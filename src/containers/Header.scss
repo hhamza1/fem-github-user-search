@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 18px;
+
+
+
+    &__logo {
+        font-size: 1.625rem;
+        color: #000;
+    }
+
+
+    &__theme-btn {
+        border: 0;
+        background-color: inherit;
+        display: flex;
+        align-items: center;
+        font-family: inherit;
+        font-weight: 700;
+        color: inherit;
+        font-size: .8125rem;
+
+
+        img {
+            padding-left: 1rem;
+        }
+    }
+}
