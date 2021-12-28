@@ -15,6 +15,11 @@ const UserDetails = () => {
                     <p className='user-profile-info__user--joined'>Joined 25 Jan 2011</p>
                 </div>
             </div>
+            <div className='user-description'>
+                <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+                </p>
+            </div>
             <table class="user-stats">
                 <tr>
                     <th>Repos</th>
