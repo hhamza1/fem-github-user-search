@@ -39,27 +39,17 @@
 
 
     .user-stats {
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-columns: repeat(3, 1fr);
         margin-top: 18px;
         padding: 18px 14px 19px 15px;
         background-color:  #f6f8ff;
         border-radius: 11px;
         width: 100%;
-
-        th {
-            grid-column: 1 / 4;
-        }
+        text-align: center;
 
         th {
             font-size: .6875rem;
             color: #4B6A9B;
             font-weight: 400;
-        }
-
-        td {
-            grid-column: auto;
         }
 
         tr {

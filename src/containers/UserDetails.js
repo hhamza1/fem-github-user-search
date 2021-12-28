@@ -16,11 +16,11 @@ const UserDetails = () => {
                 </div>
             </div>
             <table class="user-stats">
-                <th>
-                    <td>Repos</td>
-                    <td>Followers</td>
-                    <td>Following</td>
-                </th>
+                <tr>
+                    <th>Repos</th>
+                    <th>Followers</th>
+                    <th>Following</th>
+                </tr>
                 <tr>
                     <td>8</td>
                     <td>3839</td>
