@@ -1,0 +1,20 @@
+.user-stats {
+    margin-top: 18px;
+    padding: 18px 14px 19px 15px;
+    background-color:  #f6f8ff;
+    border-radius: 11px;
+    width: 100%;
+    text-align: center;
+
+    th {
+        font-size: .6875rem;
+        color: #4B6A9B;
+        font-weight: 400;
+    }
+
+    tr {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #000;
+    }
+}

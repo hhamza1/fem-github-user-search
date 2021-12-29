@@ -1,0 +1,31 @@
+.user-profile-info{
+    display: grid;
+    grid-template-columns: minmax(50px, 70px) 1fr;
+    gap: 19px;
+
+    img {
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    &__user {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &--fullname {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #000;
+        }
+
+        &--username, &--joined {
+            font-size: .8125rem;
+            grid-column: 2 / 3;
+        }
+
+        &--username {
+            color: #0079FF;
+        }
+    }
+}
