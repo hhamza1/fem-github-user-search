@@ -69,5 +69,19 @@
         margin: 0;
         padding: 0;
         list-style-type: none;
+        padding-top: 8px;
+
+        li {
+            display: flex;
+            padding: 8px 0;
+            img {
+                width: .8125rem;
+            }
+
+            span {
+                font-size: .8125rem;
+                margin-left: 19px;
+            }
+        }
     }
 }

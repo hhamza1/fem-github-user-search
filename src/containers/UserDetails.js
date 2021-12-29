@@ -65,7 +65,7 @@ const UserDetails = () => {
                     return (
                         <li className={el.name} index={index}>
                             <img src={el.icon} alt={el.name} />
-                            {el.name}
+                            <span>{el.name}</span>
                         </li>
                     )
                 })}
