@@ -29,3 +29,26 @@
         }
     }
 }
+
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .user-profile-info {
+        grid-template-columns: minmax(90px, 117px) 1fr;
+        gap: 41px;
+
+        &__user {
+            justify-content: center;
+
+            &--fullname {
+                font-size: 1.625rem;
+            }
+
+            &--username {
+                font-size: 1rem;
+            }
+            &--joined{
+                font-size: .9375rem;
+            }
+        }
+    }
+}

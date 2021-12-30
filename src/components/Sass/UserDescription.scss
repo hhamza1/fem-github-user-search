@@ -3,3 +3,9 @@
     font-size: .8125rem;
     line-height: 25px;
 }
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .user-description {
+        font-size: .9375rem;
+    }
+}

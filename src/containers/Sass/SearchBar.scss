@@ -18,7 +18,14 @@
 
     img {
         padding: 9px;
-        max-width: 20px;
-        max-height: 20px;
+        max-width: 24px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px)  {
+    .searchbar {
+        img {
+            padding: 22px 32px;
+        }
     }
 }
