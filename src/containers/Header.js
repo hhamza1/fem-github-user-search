@@ -2,7 +2,7 @@ import React from 'react';
 
 import IconMoon from '../assets/icon-moon.svg';
 
-import './Header.scss';
+import './Sass/Header.scss';
 
 
 const Header = () => {

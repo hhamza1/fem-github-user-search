@@ -4,14 +4,14 @@ import InputField from '../components/InputField';
 import SearchBtn from '../components/SearchBtn';
 
 import Magnifier from '../assets/icon-search.svg';
-import './SearchBar.scss'
+import './Sass/SearchBar.scss'
 
 
-const SearchBar = () => {
+const SearchBar = ({searchUser}) => {
     return (
         <div className='searchbar'>
             <img src={Magnifier} alt="search username" />
-            <InputField />
+            <InputField searchUser={searchUser}/>
             <SearchBtn />
         </div>
     )

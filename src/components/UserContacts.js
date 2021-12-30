@@ -5,7 +5,7 @@ import companyIcon from '../assets/icon-company.svg';
 import twitterIcon from '../assets/icon-twitter.svg';
 import websiteIcon from '../assets/icon-website.svg';
 
-import './UserContacts.scss';
+import './Sass/UserContacts.scss';
 
 
 const UserContacts = () => {

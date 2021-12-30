@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import './UserDetails.scss';
+import './Sass/UserDetails.scss';
 import UserContacts from '../components/UserContacts';
 import UserProfile from '../components/UserProfile';
 import UserStats from '../components/UserStats';

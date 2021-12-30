@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './SearchBtn.scss';
+import './Sass/SearchBtn.scss';
 
 const SearchBtn = () => {
     return(

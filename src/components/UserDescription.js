@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import './UserDescription.scss';
+import './Sass/UserDescription.scss';
 
 
 const UserDescription = () => {

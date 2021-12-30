@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './UserStats.scss';
+import './Sass/UserStats.scss';
 
 
 const UserStats = () => {

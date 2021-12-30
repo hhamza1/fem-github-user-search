@@ -2,7 +2,7 @@ import React from 'react';
 
 import profileImage from '../assets/octocat.png';
 
-import './UserProfile.scss';
+import './Sass/UserProfile.scss';
 
 
 const UserProfile = () => {
