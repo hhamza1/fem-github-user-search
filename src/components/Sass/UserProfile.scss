@@ -27,6 +27,12 @@
         &--username {
             color: #0079FF;
         }
+
+        &--user-description {
+            margin: 17px 0;
+            font-size: .8125rem;
+            line-height: 25px;
+        }
     }
 }
 
@@ -49,6 +55,47 @@
             &--joined{
                 font-size: .9375rem;
             }
+            &--user-description {
+                font-size: .9375rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .user-profile-info {
+        grid-column: 1 / 3;
+        grid-template-columns: 117px auto;
+        gap: 37px;
+
+        img {
+            grid-column: 1 / 2;
+            max-width: 117px;
+
+        }
+
+        &__user{
+            grid-column: 2 / 3;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            &--fullname, &--joined {
+                align-self: center;
+            }
+            
+            &--username {
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+            }
+
+            &--joined{
+                justify-self: flex-end;
+            }
+
+            &--user-description {
+                grid-column: 1 / 3;
+            }
+            
         }
     }
 }

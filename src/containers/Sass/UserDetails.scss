@@ -11,3 +11,13 @@
         margin-top: 12px;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .user-details {
+        margin-top: 24px;
+        display: grid;
+        grid-template-columns: minmax(0, 117px) minmax(0, 480px);
+        max-width: 730px;
+        column-gap: 37px;
+    }
+}
