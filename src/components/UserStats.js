@@ -3,7 +3,7 @@ import React from 'react';
 import './Sass/UserStats.scss';
 
 
-const UserStats = () => {
+const UserStats = ({user}) => {
     return(
         <table className="user-stats">
             <thead>
@@ -15,9 +15,9 @@ const UserStats = () => {
             </thead>
             <tbody>
                 <tr>
-                    <td>8</td>
-                    <td>3839</td>
-                    <td>9</td>
+                    <td>{user.public_repos}</td>
+                    <td>{user.followers}</td>
+                    <td>{user.following}</td>
                 </tr>
             </tbody>
         </table>

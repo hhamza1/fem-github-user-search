@@ -4,15 +4,16 @@ import InputField from '../components/InputField';
 import SearchBtn from '../components/SearchBtn';
 
 import Magnifier from '../assets/icon-search.svg';
-import './Sass/SearchBar.scss'
+import './Sass/SearchBar.scss';
 
 
-const SearchBar = ({searchUser}) => {
+const SearchBar = ({user, submitHandler, onChangeHandler}) => {
+
     return (
         <div className='searchbar'>
             <img src={Magnifier} alt="search username" />
-            <InputField searchUser={searchUser}/>
-            <SearchBtn />
+            <InputField user={user} onChangeHandler={onChangeHandler}/>
+            <SearchBtn submitHandler={submitHandler}/>
         </div>
     )
 }

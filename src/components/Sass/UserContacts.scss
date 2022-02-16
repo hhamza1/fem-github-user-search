@@ -6,6 +6,7 @@
 
     li {
         display: flex;
+        align-items: center;
         padding: 8px 0;
         img {
             width: .8125rem;
@@ -40,6 +41,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column: 2 / 3;
+
+        .contact-icons {
+            align-items: center;
+        }
 
         .twitter-icon {
             grid-column: 2 / 3;

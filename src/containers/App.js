@@ -9,18 +9,41 @@ import UserDetails from './UserDetails';
 
 
 const App = () => {
+
   const [user, setUser] = useState([]);
 
-  const searchUser = (e) => {
-    console.log(e.target.value);
+  useEffect(() => {
+    fetch(`https://api.github.com/users/octocat`)
+    .then(res => res.json())
+    .then(data => setUser(data));
+  }, []);
+
+
+  const onChangeHandler = e => {
+    setUser(e.target.value);
   }
+
+  const submitHandler = async e => {
+    e.preventDefault();
+
+    const profile = await fetch(`https://api.github.com/users/${user}`);
+
+    const profileJson = await profile.json();
+    console.log(profileJson);
+    setUser(profileJson);
+  }
+
 
 
   return (
     <div className='App'>
       <Header />
-      <SearchBar searchUser={searchUser}/>
-      <UserDetails />
+      <SearchBar
+        user={user}
+        submitHandler={submitHandler}
+        onChangeHandler={onChangeHandler}
+        />
+      <UserDetails user={user}/>
       <Footer />
     </div>
   );

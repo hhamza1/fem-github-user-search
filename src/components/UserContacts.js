@@ -8,22 +8,26 @@ import websiteIcon from '../assets/icon-website.svg';
 import './Sass/UserContacts.scss';
 
 
-const UserContacts = () => {
+const UserContacts = ({user}) => {
     const iconArray = [
         {
-            name: 'location-icon',
+            name: (user.location==null?"Not Available":user.location),
+            class: 'location-icon',
             icon: locationIcon
         },
         {
-            name: 'company-icon',
+            name: (user.company==null?"Not Available":user.company),
+            class: 'company-icon',
             icon: companyIcon
         },
         {
-            name: 'twitter-icon',
+            name: (user.twitter_username==null?"Not Available":user.twitter_username),
+            class: 'twitter-icon',
             icon: twitterIcon
         },
         {
-            name:'website-icon',
+            name: (user.blog==null?"Not Available":user.blog),
+            class: 'website-icon',
             icon: websiteIcon
         }
     ];
@@ -32,7 +36,7 @@ const UserContacts = () => {
             {
                 iconArray.map((el,index) => {
                 return (
-                    <li className={el.name} key={index}>
+                    <li className={el.class} key={index}>
                         <img src={el.icon} alt={el.name} />
                         <span>{el.name}</span>
                     </li>

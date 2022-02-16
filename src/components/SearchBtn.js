@@ -2,9 +2,9 @@ import React from 'react';
 
 import './Sass/SearchBtn.scss';
 
-const SearchBtn = () => {
+const SearchBtn = ({submitHandler}) => {
     return(
-        <button className='search-btn'>
+        <button className='search-btn' onClick={submitHandler}>
             Search
         </button>
     )

@@ -3,15 +3,16 @@ import React from 'react';
 import './Sass/InputField.scss';
 
 
-const InputField = ({searchUser}) => {
+const InputField = ({user, onChangeHandler}) => {
     return (
         <input 
             type="text" 
             className="input-field"
-            onChange={searchUser}
+            onChange = {onChangeHandler}
             id = "username"
-            name='username' 
-            placeholder='Search Github username...' />
+            name = 'username'
+            value = {user.login}
+            placeholder='Search Github username...'/>
     )
 }
 
