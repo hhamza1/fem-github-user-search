@@ -11,6 +11,8 @@ import UserDetails from './UserDetails';
 const App = () => {
 
   const [user, setUser] = useState([]);
+  const [dark, isDark] = useState(false);
+  //const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     fetch(`https://api.github.com/users/octocat`)
@@ -20,8 +22,9 @@ const App = () => {
 
 
   const onChangeHandler = e => {
+    e.preventDefault();
     setUser(e.target.value);
-  }
+  };
 
   const submitHandler = async e => {
     e.preventDefault();

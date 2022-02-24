@@ -15,13 +15,13 @@ const UserProfile = ({user}) => {
 
     return(
         <div className="user-profile-info">
-            <img src={user.avatar_url} alt="The Octocat" />
+            <img src={user.avatar_url} alt={(!user.name ? 'No User' : user.name)} />
             <div className='user-profile-info__user'>
-                <p className='user-profile-info__user--fullname'>{user.name}</p>
-                <p className='user-profile-info__user--username'>@{user.login}</p>
-                <p className='user-profile-info__user--joined'>Joined {dateConverter(user.created_at)}</p>
+                <p className='user-profile-info__user--fullname'>{(!user.name ? 'No Name' : user.name)}</p>
+                <p className='user-profile-info__user--username'>{(!user.login ? 'No Username' : `@${user.login}`)}</p>
+                <p className='user-profile-info__user--joined'>{(!user.created_at ? 'No Date' : `Joined ${dateConverter(user.created_at)}`)}</p>
                 <p className='user-profile-info__user--user-description'>
-                    {user.bio}
+                    {(!user.bio ? 'No Bio' : user.bio)}
                 </p>
             </div>
         </div>
