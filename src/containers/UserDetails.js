@@ -6,12 +6,12 @@ import UserContacts from '../components/UserContacts';
 import UserProfile from '../components/UserProfile';
 import UserStats from '../components/UserStats';
 
-const UserDetails = ({user, isLoaded}) => {
+const UserDetails = ({userData, isLoaded}) => {
     return(
         <div className='user-details'>
-            <UserProfile user={user} />
-            <UserStats user={user}/>
-            <UserContacts user={user}/>
+            <UserProfile userData={userData} />
+            <UserStats userData={userData}/>
+            <UserContacts userData={userData}/>
         </div>
     )
 }

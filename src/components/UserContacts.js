@@ -8,25 +8,25 @@ import websiteIcon from '../assets/icon-website.svg';
 import './Sass/UserContacts.scss';
 
 
-const UserContacts = ({user}) => {
+const UserContacts = ({userData}) => {
     const iconArray = [
         {
-            name: (user.location==null?"Not Available":user.location),
+            name: (userData.location==null?"Not Available":userData.location),
             class: 'location-icon',
             icon: locationIcon
         },
         {
-            name: (user.company==null?"Not Available":user.company),
+            name: (userData.company==null?"Not Available":userData.company),
             class: 'company-icon',
             icon: companyIcon
         },
         {
-            name: (user.twitter_username==null?"Not Available":user.twitter_username),
+            name: (userData.twitter_username==null?"Not Available":userData.twitter_username),
             class: 'twitter-icon',
             icon: twitterIcon
         },
         {
-            name: (user.blog==null?"Not Available":user.blog),
+            name: (userData.blog==null?"Not Available":userData.blog),
             class: 'website-icon',
             icon: websiteIcon
         }

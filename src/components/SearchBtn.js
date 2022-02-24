@@ -4,7 +4,7 @@ import './Sass/SearchBtn.scss';
 
 const SearchBtn = ({submitHandler}) => {
     return(
-        <button className='search-btn' onClick={submitHandler}>
+        <button className='search-btn'>
             Search
         </button>
     )

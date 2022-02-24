@@ -3,7 +3,7 @@ import React from 'react';
 import './Sass/UserProfile.scss';
 
 
-const UserProfile = ({user}) => {
+const UserProfile = ({userData}) => {
     const dateConverter = (date) => {
         if (date) {
           var newDate = new Date(date);
@@ -15,13 +15,13 @@ const UserProfile = ({user}) => {
 
     return(
         <div className="user-profile-info">
-            <img src={user.avatar_url} alt={(!user.name ? 'No User' : user.name)} />
+            <img src={userData.avatar_url} alt={(!userData.name ? 'No User' : userData.name)} />
             <div className='user-profile-info__user'>
-                <p className='user-profile-info__user--fullname'>{(!user.name ? 'No Name' : user.name)}</p>
-                <p className='user-profile-info__user--username'>{(!user.login ? 'No Username' : `@${user.login}`)}</p>
-                <p className='user-profile-info__user--joined'>{(!user.created_at ? 'No Date' : `Joined ${dateConverter(user.created_at)}`)}</p>
+                <p className='user-profile-info__user--fullname'>{(!userData.name ? 'No Name' : userData.name)}</p>
+                <p className='user-profile-info__user--username'>{(!userData.login ? 'No Username' : `@${userData.login}`)}</p>
+                <p className='user-profile-info__user--joined'>{(!userData.created_at ? 'No Date' : `Joined ${dateConverter(userData.created_at)}`)}</p>
                 <p className='user-profile-info__user--user-description'>
-                    {(!user.bio ? 'No Bio' : user.bio)}
+                    {(!userData.bio ? 'No Bio' : userData.bio)}
                 </p>
             </div>
         </div>
