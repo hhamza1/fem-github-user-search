@@ -1,25 +1,34 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
-import IconMoon from '../assets/icon-moon.svg';
+import { ThemeContext } from '../contexts/ThemeContext';
+
+
+import {ReactComponent as IconMoon} from '../assets/icon-moon.svg';
+import {ReactComponent as IconSun} from '../assets/icon-sun.svg';
 
 import './Sass/Header.scss';
 
 
 const Header = () => {
+
+    const {isDark, setIsDark} = useContext(ThemeContext);
+
+
     return(
         <div className='header'>
-            <h1 className='header__logo'>
+            <h1 className={isDark === false ? 'header__logo' : 'header__logo header__logo--dark'}>
                 devfinder
             </h1>
-            <button className='header__theme-btn'>
+            <button 
+                className={isDark === false ? 'header__theme-btn' : 'header__theme-btn header__theme-btn--dark'} 
+                onClick={()=>setIsDark(!isDark)}>
                 <span 
                     className='header__theme-btn--txt'>
-                        Dark
+                        {isDark === false ? 'Dark' : 'Light'}
                 </span>
-                <img 
-                    className='header__theme-btn--icon' 
-                    src={IconMoon} 
-                    alt="Dark Mode" />
+                {isDark === false ? 
+                <IconMoon className='header__theme-btn--icon' /> : 
+                <IconSun className='header__theme-btn--icon' />}
             </button>
         </div>
     )

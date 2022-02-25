@@ -4,6 +4,15 @@
     padding: 32px 24px;
     border-radius: 11px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
+    transition: all .3s ease-in-out;
+
+    &__dark {
+        background-color: #1E2A47;
+
+            & ~ .user-profile{
+            color: #fff;
+        } 
+    }
 }
 
 @media screen and (min-width: 641px) and (max-width: 1023px)  {

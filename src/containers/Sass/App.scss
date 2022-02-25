@@ -1,6 +1,37 @@
 .App {
+
+
+
   padding: 30px 24px;
   color: #4B6A9B;
+  transition: all .3s ease-in-out;
+
+  &__dark {
+    color: #fff;
+    background-color: #141D2F;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    table{
+      background-color: #141D2F;
+      
+      th, tr {
+        color: #fff;
+      }
+
+      
+      
+    }
+
+    .user-profile-info__user--fullname {
+      color: #fff;
+    }
+  }
+
+  table {
+    transition: all .3s ease-in-out;
+  }
+
 }
 
 

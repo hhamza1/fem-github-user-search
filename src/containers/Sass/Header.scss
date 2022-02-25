@@ -8,6 +8,11 @@
     &__logo {
         font-size: 1.625rem;
         color: #000;
+
+        &--dark{
+            color: #fff;
+            transition: all .3s ease-in-out;
+        }
     }
 
 
@@ -22,13 +27,22 @@
         font-size: .8125rem;
         cursor: pointer;
 
+        &--dark{
+            color: #90A4D4;
+            transition: all .3s ease-in-out;
+        }
+
         &--txt {
             text-transform: uppercase;
         }
 
 
-        img {
+        &--icon {
             padding-left: 1rem;
+
+            g {
+                fill: #90A4D4;
+            }
         }
     }
 }

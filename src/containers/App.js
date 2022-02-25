@@ -7,19 +7,16 @@ import SearchBar from './SearchBar';
 import Footer from './Footer';
 import UserDetails from './UserDetails';
 
+import { ThemeContext } from '../contexts/ThemeContext';
+
 
 const App = () => {
 
   const [user, setUser] = useState('octocat');
   const [userData, setUserData] = useState([]);
-  const [dark, isDark] = useState(false);
-  //const [isLoaded, setIsLoaded] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
-  useEffect(() => {
-    fetch(`https://api.github.com/users/octocat`)
-    .then(res => res.json())
-    .then(data => setUserData(data));
-  }, []);
+  
 
 
 
@@ -30,17 +27,26 @@ const App = () => {
       .then(data =>  setUserData(data));
   }
 
+
+  useEffect(() => {
+    fetch(`https://api.github.com/users/octocat`)
+    .then(res => res.json())
+    .then(data => setUserData(data));
+  }, []);
+
   return (
-    <div className='App'>
-      <Header />
-      <SearchBar
-        user={user}
-        submitHandler={submitHandler}
-        setUser={setUser}
-        />
-      <UserDetails userData={userData}/>
-      <Footer />
-    </div>
+      <ThemeContext.Provider value={{isDark, setIsDark}}>
+      <div className={isDark === false ? 'App' : 'App App__dark'}>
+        <Header />
+        <SearchBar
+          user={user}
+          submitHandler={submitHandler}
+          setUser={setUser}
+          />
+        <UserDetails userData={userData}/>
+        <Footer />
+        </div>
+      </ThemeContext.Provider>
   );
 }
 

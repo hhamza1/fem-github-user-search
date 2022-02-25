@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import InputField from '../components/InputField';
 import SearchBtn from '../components/SearchBtn';
+
+import { ThemeContext } from '../contexts/ThemeContext';
 
 import Magnifier from '../assets/icon-search.svg';
 import './Sass/SearchBar.scss';
@@ -9,8 +11,10 @@ import './Sass/SearchBar.scss';
 
 const SearchBar = ({user, submitHandler, setUser}) => {
 
+    const {isDark} = useContext(ThemeContext);
+
     return (
-        <form className='searchbar' onSubmit={submitHandler}>
+        <form className={isDark === false ? 'searchbar' : 'searchbar searchbar__dark'} onSubmit={submitHandler}>
             <img src={Magnifier} alt="search username" />
             <InputField user={user} setUser={setUser}/>
             <SearchBtn />

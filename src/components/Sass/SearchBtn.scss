@@ -8,4 +8,10 @@
     font-weight: 700;
     padding: 12.5px 18px;
     margin: 7px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #60ABFF;
+    }
 }

@@ -8,7 +8,6 @@ body {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: #F6F8FF;
   height: 100vh;
 
@@ -24,3 +23,10 @@ p{
   margin: 0;
   padding: 0;
 }
+
+@media screen and (min-width: 1024px) {
+  body{
+    align-items: center;
+  }
+}
+
