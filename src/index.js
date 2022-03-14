@@ -1,6 +1,4 @@
-import React, {useContext} from 'react';
-
-import { ThemeContext } from './contexts/ThemeContext';
+import React from 'react';
 
 import ReactDOM from 'react-dom';
 import './index.scss';
@@ -8,7 +6,6 @@ import App from './containers/App';
 
 
 const Index = () =>{
-  const {isDark} = useContext(ThemeContext);
 
   return(
     <App />
