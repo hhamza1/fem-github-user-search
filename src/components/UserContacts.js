@@ -11,22 +11,22 @@ import './Sass/UserContacts.scss';
 const UserContacts = ({userData}) => {
     const iconArray = [
         {
-            name: (userData.location==null?"Not Available":userData.location),
+            name: (userData.location ===null ? "Not Available" :userData.location),
             class: 'location-icon',
             icon: locationIcon
         },
         {
-            name: (userData.company==null?"Not Available":userData.company),
+            name: (userData.company ===null ? "Not Available" :userData.company),
             class: 'company-icon',
             icon: companyIcon
         },
         {
-            name: (userData.twitter_username==null?"Not Available":userData.twitter_username),
+            name: (userData.twitter_username === null ? "Not Available" :userData.twitter_username),
             class: 'twitter-icon',
             icon: twitterIcon
         },
         {
-            name: (userData.blog==null?"Not Available":userData.blog),
+            name: (userData.blog === null ? "Not Available" : userData.blog),
             class: 'website-icon',
             icon: websiteIcon
         }
@@ -36,7 +36,7 @@ const UserContacts = ({userData}) => {
             {
                 iconArray.map((el,index) => {
                 return (
-                    <li className={el.class} key={index}>
+                    <li className={el.name==="Not Available" ? `${el.class} not-available` : `${el.class}`} key={index}>
                         <img src={el.icon} alt={el.name} />
                         <span>{el.name}</span>
                     </li>
