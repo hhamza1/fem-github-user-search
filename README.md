@@ -16,7 +16,7 @@ This is a solution to the [Github user search app challenge on Frontend Mentor](
 
 ### The challenge
 
-The challenge is to build out a GitHub user search app using the GitHub users API and get itlooking as close to the design as possible. This challenge would be built using Vue.js (First attempt to learn it)
+The challenge is to build out a GitHub user search app using the GitHub users API and get itlooking as close to the design as possible. This challenge would be built using ReactJS
 
 The users should be able to:
 
@@ -29,17 +29,31 @@ The users should be able to:
 
 ### Screenshot
 
-#### Mobile View - Light
-![Mobile View](./screenshots/mobile-vew-light.png)
+#### Mobile View 
+##### Light
 
+![Mobile View - Light](./screenshots/mobile-light.png)
+
+##### Dark
+
+![Mobile View - Dark](./screenshots/mobile-dark.png)
 #### Tablet View
-![Tablet View](./screenshots/tablet-view.png)
+##### Light
+
+![Tablet View - Light](./screenshots/tablet-light.png)
+
+##### Dark
+
+![Tablet View - Dark](./screenshots/tablet-dark.png)
 
 #### Desktop View
-![Desktop View](./screenshots/desktop-view.png)
+##### Light
 
-#### Desktop View - Active state
-![Desktop View - Active state](./screenshots/desktop-active-state.png)
+![Desktop View - Light](./screenshots/desktop-light.png)
+
+##### Dark
+
+![Desktop View - Dark](./screenshots/desktop-dark.png)
 
 ### Links
 
@@ -50,7 +64,7 @@ The users should be able to:
 
 ### Built with
 
-- Vue.js
+- React
 - HTML
 - CSS
 - JS
