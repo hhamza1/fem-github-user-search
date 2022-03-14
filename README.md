@@ -58,7 +58,7 @@ The users should be able to:
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/hhamza1/fem-github-user-search)
-- Live Site URL: [Live Preview : TBD](#)
+- Live Site URL: [Live Preview](https://jolly-archimedes-d1b24c.netlify.app/)
 
 ## My process
 
