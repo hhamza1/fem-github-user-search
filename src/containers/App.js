@@ -42,6 +42,7 @@ const App = () => {
           user={user}
           submitHandler={submitHandler}
           setUser={setUser}
+          userData={userData}
           />
         <UserDetails userData={userData}/>
         <Footer />

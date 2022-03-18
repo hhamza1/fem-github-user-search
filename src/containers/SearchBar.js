@@ -9,7 +9,7 @@ import Magnifier from '../assets/icon-search.svg';
 import './Sass/SearchBar.scss';
 
 
-const SearchBar = ({user, submitHandler, setUser}) => {
+const SearchBar = ({user, submitHandler, setUser, userData}) => {
 
     const {isDark} = useContext(ThemeContext);
 
@@ -17,6 +17,7 @@ const SearchBar = ({user, submitHandler, setUser}) => {
         <form className={isDark === false ? 'searchbar' : 'searchbar searchbar__dark'} onSubmit={submitHandler}>
             <img src={Magnifier} alt="search username" />
             <InputField user={user} setUser={setUser}/>
+            {userData.login !== undefined ? '': <span className='error-message'>No Results</span>}
             <SearchBtn />
         </form>
     )
