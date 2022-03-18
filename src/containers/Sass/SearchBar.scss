@@ -8,6 +8,15 @@
     border-radius: 11px;
     transition: all .3s ease-in-out;
 
+
+   .error-message {
+       color: #F74646;
+       font-size: 15px;
+       font-weight: 700;
+       min-width: fit-content;
+       transition: all .3s ease-in-out;
+   }
+
     [type=text] {
         padding: 0;
     }
