@@ -11,13 +11,22 @@ const UserDetails = ({userData}) => {
 
     const {isDark} = useContext(ThemeContext);
 
-    return(
-        <div className={isDark === false ? 'user-details' : 'user-details user-details__dark'}>
-            <UserProfile userData={userData} />
-            <UserStats userData={userData}/>
-            <UserContacts userData={userData}/>
-        </div>
-    )
+    if(userData.login !== undefined) {
+        return (
+                <div className={isDark === false ? 'user-details' : 'user-details user-details__dark'}>
+                    <UserProfile userData={userData} />
+                    <UserStats userData={userData}/>
+                    <UserContacts userData={userData}/>
+                </div>
+        )
+    }
+    else {
+        return(
+            <div className={isDark === false ? 'user-details' : 'user-details user-details__dark'}>
+                <div className="no-profile">No Profile Available</div>
+            </div>
+        )
+    }
 }
 
 export default UserDetails;
