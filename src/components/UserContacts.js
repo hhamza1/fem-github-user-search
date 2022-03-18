@@ -11,22 +11,22 @@ import './Sass/UserContacts.scss';
 const UserContacts = ({userData}) => {
     const iconArray = [
         {
-            name: (userData.location ===null ? "Not Available" :userData.location),
+            name: (userData.location ===undefined || userData.location === null ? "Not Available" :userData.location),
             class: 'location-icon',
             icon: locationIcon
         },
         {
-            name: (userData.company ===null ? "Not Available" :userData.company),
+            name: (userData.company ===undefined || userData.company === null ? "Not Available" :userData.company),
             class: 'company-icon',
             icon: companyIcon
         },
         {
-            name: (userData.twitter_username === null ? "Not Available" :userData.twitter_username),
+            name: (userData.twitter_username === undefined || userData.twitter_username === null ? "Not Available" :userData.twitter_username),
             class: 'twitter-icon',
             icon: twitterIcon
         },
         {
-            name: (userData.blog === null ? "Not Available" : userData.blog),
+            name: (userData.blog === undefined || userData.blog === null ? "Not Available" : userData.blog),
             class: 'website-icon',
             icon: websiteIcon
         }
