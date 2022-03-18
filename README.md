@@ -1,4 +1,4 @@
-# Frontend Mentor - Github User Search App with Vue.js
+# Frontend Mentor - Github User Search App with ReactJS
 
 This is a solution to the [Github user search app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6)
 
